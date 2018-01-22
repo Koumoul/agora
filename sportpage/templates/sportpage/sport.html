@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+{% extends 'base.html'%}
+{% load static %}
+
+<html>
+
+<head>
+	{% block title %}{{ sport_name }}{% endblock %}
+	{% block extra_head %}
+	<link rel="stylesheet" href="{% static "sportpage/style.css" %}"/>
+	<link rel="stylesheet" href="{% static "wall/style.css" %}"/>
+	{% endblock %}
+</head>
+
+<body>
+	{% block content %}
+	<div class="container">
+
+		<section class="section1">
+			<p style="padding-top: 4em">section 1</p>	<!-- First section -->
+		</section>
+
+		<section class="section2">				<!-- Start second section -->
+			<div>
+				{% if user.is_authenticated %}
+				<form method='POST' action=''>
+					{% csrf_token %}
+					{{ form.text }}
+					<input type='submit' value='send'>
+				</form>
+				{% endif %}
+			</div>
+			<div class="wallcont" >
+				{% block wall %}
+				{% include "wall/wall.html" with bricks=bricks %}
+				{% endblock %}
+			</div>
+		</section>						<!-- end second section -->
+	</div>
+	{% endblock %}
+</body>
+
+</html>

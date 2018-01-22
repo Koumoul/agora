@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+	<meta>
+
+	</meta>
+<body>
+	{% if user.is_authenticated %}
+	<p>Tu es deja connecte, {{user.username}}.</p>
+	<h2><a href= "{% url 'logout' %}">Logout</a></h2>
+	{% else %}
+	<h1>Signin</h1>
+	<form method="post" action="{% url 'signin' %}">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Send"/>
+	</form>
+	{% endif %}
+</body>
+
+</html>
