@@ -30,7 +30,7 @@ def loginView(request):
 
     return render(request, 'user_app/login.html', locals())
 
-@login_required(login_url='login')
+
 def signinView(request):
 
     if request.method == "POST":

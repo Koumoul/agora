@@ -7,4 +7,3 @@ from .forms import UserPostForm
 def wall(request):
 
     return render(request, 'wall/wall.html', {"a": 3,})
-

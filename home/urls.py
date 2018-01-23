@@ -16,5 +16,5 @@ sport_name_re = '(?P<sport_name>' + '|'.join(sport_name) + ')'
 
 urlpatterns = [
         url(r'^$', views.home, name='home'),
-        url(r'^' + sport_name_re + '$', login_required(SportView.as_view()), name='sport'),
+        url(r'^' + sport_name_re + '$', SportView.as_view(), name='sport'),
         ]
