@@ -8,7 +8,7 @@
   <head>
     {% block title %}Friends{% endblock %}
     {% block extra_head %}
-    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" href="{% static "friends/css/style.css" %}"/>
     {% endblock %}
   </head>
 
@@ -18,8 +18,10 @@
     <div class="container">
       {% for user in users %}
       <div class="item">
-        <img src="{% static "friends/image/user.png" %}">
         <p>{{ user.username }}</p>
+        <img class="profile-pic" src="{% static "friends/image/user.png" %}">
+        <a class="follow" href=#>Follow</a>
+
       </div>
       {% endfor %}
     </div>
