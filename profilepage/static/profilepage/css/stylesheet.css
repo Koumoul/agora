@@ -1,0 +1,16 @@
+.presentation_card {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.profile_picture {
+  height:   150px;
+  width:    150px;
+}
+
+.my_wall {
+  margin-top:   2em;
+  text-align:   center;
+  width:        40%;
+}
+

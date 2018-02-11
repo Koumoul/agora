@@ -46,6 +46,10 @@ def signinView(request):
                 user = User.objects.create_user(username=username, password=password, first_name=first_name,
                         last_name=family_name, email=email)
                 user.save()
+
+                login(request, user)
+                if user.is_authenticated: return redirect('home')
+
     else:
         form = SigninForm()
 

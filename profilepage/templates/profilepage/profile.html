@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+<html>
+
+<head>
+  {% block title %}Profile{% endblock %}
+  {% block extra_head %}
+  <link rel="stylesheet" href="{% static "profilepage/css/stylesheet.css" %}"/>
+  <link rel="stylesheet" href="{% static "wall/style.css" %}"/>
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+
+    <div class="presentation_card">
+      <img class="profile_picture" src="{% static "profilepage/image/user.png" %}">
+      <p>{{ user.username }}</p>
+    </div>
+
+    <div class="my_wall">
+      <p>Mes post</p>
+      {% block wall %}
+      {% include "wall/wall.html" with bircks=bricks %}
+      {% endblock %}
+    </div>
+
+
+  {% endblock %}
+</body>
+
+</html>

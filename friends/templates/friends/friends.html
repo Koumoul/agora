@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+<html>
+  <head>
+    {% block title %}Friends{% endblock %}
+    {% block extra_head %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block content %}
+    <p class="container">Find some friends !</p>
+    <div class="container">
+      {% for user in users %}
+      <div class="item">
+        <img src="{% static "friends/image/user.png" %}">
+        <p>{{ user.username }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endblock %}
+  </body>
+
+</html>
+

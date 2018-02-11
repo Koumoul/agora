@@ -23,7 +23,7 @@ class SportView(View):
 
             userbrick = UserBrick(
                                 text=text,
-                                autor='test',
+                                autor = request.user.username,
                                 sport_name = sport_name,
                                 )
             userbrick.save()

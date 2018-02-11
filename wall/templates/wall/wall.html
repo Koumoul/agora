@@ -1,7 +1,10 @@
 {% block wall %}
 
 {% for brick in bricks %}
-<div class="brick">{{ brick.text }}</div>
+<div class="brick">
+  <div class="text">{{ brick.text }}</div>
+  <div class="autor">{{ brick.autor }} | {{ brick.date|date:"d/m/y" }} - {{ brick.time|time:"H:i" }}</div>
+</div>
 {% endfor %}
 
 {% endblock %}

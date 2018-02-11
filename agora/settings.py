@@ -25,7 +25,7 @@ SECRET_KEY = 'w+c57@4jgjpw_ji8!b-y*bej#37v0v-=th81w#)y^!l-o1hp=c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['koumoul.pythonanywhere.com',]
+ALLOWED_HOSTS = ['koumoul.pythonanywhere.com','localhost', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'user_app.apps.UserAppConfig',
     'wall.apps.WallConfig',
     'sportpage.apps.SportpageConfig',
+    'profilepage.apps.ProfilepageConfig',
+    'friends.apps.FriendsConfig',
 ]
 
 MIDDLEWARE = [
