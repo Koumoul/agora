@@ -17,27 +17,8 @@
 	border-width:	0.2em;
 	border-style:	solid;
 }
-
-.topnav {
-	overflow:		hidden;
-	background-color:	black;
+.img {
+	width:	8em;
+	height:	8em;
 }
 
-.topnav a {
-	padding: 		1em 2em;
-	float:			left;
-	text-align: 		center;
-	text-decoration:	none;
-	font-size: 		17px;
-	color: 			white;
-	display:		block;
-}
-
-.topnav a.right {
-	float: right;
-}
-
-.topnav a:hover {
-	background-color:	white;
-	color:			black;
-}

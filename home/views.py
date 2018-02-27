@@ -5,5 +5,5 @@ from . import models
 
 
 def home(request):
-    sports = models.Sport.objects.all()  
+    sports = models.Sport.objects.all()
     return render(request, 'home/home.html', {'sports': sports})

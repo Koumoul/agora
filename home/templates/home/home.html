@@ -19,7 +19,7 @@
 	<div class="container">
 		{% for sport in sports %}
 		<a class="item" href={% url 'sport' sport.name %}>
-			<img src="{% static "images/"|add:sport.image_name %}">
+			<img class="img" src="{% static "images/"|add:sport.image_name %}">
 		</a>
 		{% endfor %}
 	</div>
